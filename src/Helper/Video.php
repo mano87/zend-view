@@ -29,12 +29,19 @@ class Video extends AbstractHtmlElement
     protected $sources;
 
     /**
+     * @var
+     */
+    protected $defaults = ['controls' => true];
+
+    /**
      * @param string|array $source
      * @param array $attribs
      * @return string
      */
     public function __invoke($source, $attribs = [])
     {
+        $attribs = array_merge($this->defaults, $attribs);
+
         if (is_string($source)) {
             $attribs = array_merge(['src' => $source], $attribs);
         }
