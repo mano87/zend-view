@@ -14,11 +14,9 @@ The following example shows a simple configuration for only one video file forma
 
 ```php
 $this->video('/video/file.mp4',
-    ['controls' =>
-        'loop' => true,
-        'width' => '400',
-        'height' => '800'
-    ]);
+    ['loop' => true,
+     'width' => '400',
+     'height' => '800']);
 ```
 
 You should use this example if you want to include different video file formats.
@@ -28,9 +26,7 @@ $this->video([
         ['src' => '/video/file.mp4', 'type' => 'video/mp4'],
         ['src' => '/video/file.ogg', 'type' => 'video/ogg']
     ],
-        ['controls' =>
-            'loop' => true,
-            'width' => '400',
-            'height' => '800'
-        ]);
+        ['loop' => true,
+         'width' => '400',
+         'height' => '800']);
 ```
